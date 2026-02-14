@@ -86,7 +86,7 @@ export default function ContactSection() {
             Security Engineer
           </span>
           <span className="badge bg-light text-dark bg-opacity-75 p-3 rounded-pill">
-            Cloud Solutions Architect
+            System Solutions Architect
           </span>
         </div>
         <p className="text-white-50 mx-auto" style={{ maxWidth: '40rem' }}>
