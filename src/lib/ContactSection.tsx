@@ -27,12 +27,12 @@ export default function ContactSection() {
                     <div className="mb-3 text-info">
                       <Mail size={32} />
                     </div>
-                    <h5 className="card-title fw-bold">Email</h5>
+                    <h5 className="card-title fw-bold">Email & Mobile</h5>
                     <a
                       href="mailto:eleazarconrad@gmail.com"
                       className="text-info text-decoration-none small"
                     >
-                      eleazarconrad@gmail.com
+                      eleazarconrad@gmail.com - 256703862204
                     </a>
                   </div>
                 </div>
