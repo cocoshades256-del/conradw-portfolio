@@ -1,0 +1,32 @@
+{
+  "name": "conradw-portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "npm -w portfolio run build",
+    "start": "npm -w portfolio run start:prod",
+    "dev": "npm run build:client && npm -w portfolio run start:dev"
+  },
+  "workspaces": [
+    "portfolio"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^5.4.21"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.13",
+    "@nestjs/core": "^11.1.13",
+    "@nestjs/platform-express": "^11.1.13",
+    "bootstrap": "^5.3.8",
+    "lucide-react": "^0.564.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}

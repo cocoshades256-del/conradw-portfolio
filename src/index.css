@@ -1,0 +1,102 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --bs-cyan: #06b6d4;
+  --bs-slate-900: #0f172a;
+  --bs-slate-800: #1e293b;
+  --bs-slate-700: #334155;
+  --text-cyan-400: #22d3ee;
+  --bg-gradient-header: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #083344 100%);
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bs-slate-900);
+  color: white;
+}
+
+.text-cyan-400 {
+  color: var(--text-cyan-400) !important;
+}
+
+.bg-cyan-500 {
+  background-color: var(--bs-cyan) !important;
+}
+
+.from-slate-950 {
+  background: var(--bg-gradient-header);
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: sticky;
+  /* Changed from fixed */
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent;
+  flex-shrink: 0;
+  border-right: 1px solid var(--bs-slate-800);
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  margin-left: 0;
+  /* Remove manual margin as we will use Flexbox */
+  flex-grow: 1;
+  min-width: 0;
+  /* Prevent flex overflow */
+  min-height: 100vh;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+  }
+}
+
+/* Custom Utilities */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Card Styling mimicking the original look */
+.card-dark {
+  background-color: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--bs-slate-700);
+}
+
+.card-dark:hover {
+  border-color: var(--bs-cyan);
+}
+
+/* Scroll Snap */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 20px;
+}
