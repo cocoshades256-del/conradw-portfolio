@@ -5,6 +5,7 @@ import {
   Shield,
   Smartphone,
   Terminal,
+  ArrowDownToLine
 } from 'lucide-react';
 
 const skillCategories = [
@@ -78,14 +79,15 @@ export default function SkillsSection() {
           <div
             className="mx-auto bg-primary"
             style={{ width: '6rem', height: '0.25rem' }}
-          ></div>
-          <p
-            className="lead text-white-50 mt-4 mx-auto"
-            style={{ maxWidth: '40rem' }}
           >
-            A comprehensive skill set built over 5+ years of hands-on
-            development across diverse projects.
-          </p>
+            <a
+              href={'/Cv.pdf'}
+              download="cv.pdf"
+              className="btn btn-outline-light"
+            >
+              <ArrowDownToLine size={20} className="me-2" /> Download CV
+            </a>
+          </div>
         </div>
 
         <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">

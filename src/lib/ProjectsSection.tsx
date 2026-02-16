@@ -16,8 +16,8 @@ const additionalProjects = [
   {
     title: 'Tetragric',
     description:
-      'A Secure Agro Fintech platform built to be a cloud-native environmental conservation solution.',
-    impact: 'Daily transactions empowering farmers with access to financial services and sustainable farming resources.',
+      'A Secure Agro Fintech platform built to be a cloud-native environmental conservation solution',
+    impact: 'Daily transactions empowering farmers with access to financial services and sustainable farming resources',
     technologies: ['C#', '.Net Core', 'Azure', 'Redis', 'Angular', 'Opa'],
     // technologies: ['Go', 'gRPC', 'PostgreSQL', 'Kubernetes', 'React', 'Opa'],
     icon: TreePalm,
@@ -26,16 +26,16 @@ const additionalProjects = [
   {
     title: 'Afromobile',
     description:
-      'Mobile TV streaming app with offline viewing for emerging markets.',
+      'Mobile TV streaming app with offline viewing for emerging markets',
     impact:
-      'Streamed 20 National TV stations to 100k users worldwide',
-    technologies: ['Node.js', 'Express', 'Linux', 'RabbitMQ'],
+      'Streaming 20 National TV stations to 100k users worldwide and enabling offline access in low-connectivity regions',
+    technologies: ['Flutter', 'Node.js', 'Express', 'Linux', 'RabbitMQ'],
     icon: Tv,
     color: 'bg-success',
   },
   {
     title: 'Know-itUg',
-    description: 'A health based game developed during the IFRAD Hackathon.',
+    description: 'A health based game developed during the IFRAD Hackathon',
     impact: 'Availed sexual health information to youths across the country in a gamified way',
     technologies: ['Flutter', 'Firebase', 'Dart', 'OAuth 2.0'],
     icon: Code2,
@@ -167,7 +167,7 @@ export default function ProjectsSection() {
 
         <div className="text-center mt-5">
           <a
-            href="https://github.com/elconrad23"
+            href="hhttps://github.com/elconrad23?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-dark btn-lg px-5"
