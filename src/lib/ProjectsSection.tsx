@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Code2, TreePalm, Tv } from 'lucide-react';
+import { Github, ExternalLink, Code2, TreePalm, Tv, SatelliteIcon, BuildingIcon, RocketIcon } from 'lucide-react';
 
 const featuredProject = {
   title: 'Obeeoma',
@@ -11,6 +11,18 @@ const featuredProject = {
   technologies: ['Typescript', 'React Native', 'Django', 'AES-256'],
   github: 'https://github.com/elconrad23/Know-itUg.git',
   demo: 'https://www.obeeoma.com/',
+};
+const featuredProject2 = {
+  title: 'RedBox Sports',
+  description: 'A NASA Hackathon project to monitor astronaut health and body performance in space.',
+  highlights: [
+    'Availed a health platform that can be applied across the earth and space to provide real-time performance analytics',
+    'Implemented a secure, scalable backend using Go and Gin, ensuring data integrity and low latency',
+    'Designed an intuitive Svelte frontend for real-time health monitoring and analytics visualization',
+  ],
+  technologies: ['Go', 'Gin', 'Svelte', 'SQL', 'OAuth 2.0'],
+  github: 'https://github.com/elconrad23/RbS',
+  demo: 'https://elconrad23.github.io/RbS/',
 };
 const additionalProjects = [
   {
@@ -41,6 +53,23 @@ const additionalProjects = [
     icon: Code2,
     color: 'bg-warning',
   },
+  {
+  title: 'Light Robotics',
+  description: 'A final year project to replace lost limbs with robotic ones and monitor health performance via a mobile app',
+  impact: 'Availed a health platform that can be applied across the earth and space to provide real-time performance analytics',
+  technologies: ['C', 'Arduino', 'Flutter', 'OAuth 2.0', 'Firebase', 'AES-256'],
+  icon: RocketIcon,
+  color: 'bg-warning',
+},
+{
+  title: 'Coco city',
+  description:
+    'My hobby which doubles as a side hustle',
+  impact: 'Fortnightly shipping of classy fashion accessories for eyes and wrists to customers in East Africa',
+  technologies: ['HTML', 'Bootstrap', 'SQL', 'Stripe API', 'AWS'],
+  icon: BuildingIcon,
+  color: 'bg-primary',
+},
 ];
 
 export default function ProjectsSection() {
@@ -67,7 +96,7 @@ export default function ProjectsSection() {
           <div className="row g-0">
             <div className="col-lg-6 bg-dark text-white p-5 d-flex flex-column justify-content-center">
               <div className="mb-3 text-info fw-bold text-uppercase small">
-                Featured Project
+                Mental Health Project
               </div>
               <h3 className="display-6 fw-bold mb-3">
                 {featuredProject.title}
@@ -92,14 +121,6 @@ export default function ProjectsSection() {
               </div>
               <div className="d-flex gap-3">
                 <a
-                  href={featuredProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline-light"
-                >
-                  <Github size={20} className="me-2" /> View Code
-                </a>
-                <a
                   href={featuredProject.demo}
                   className="btn btn-info text-white"
                 >
@@ -107,23 +128,45 @@ export default function ProjectsSection() {
                 </a>
               </div>
             </div>
-            <div className="col-lg-6 bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-5">
-              {/* Placeholder for project image */}
-              <div className="text-center text-secondary">
-                <img
-                  src="/tetrasample.png"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: '300px',
-                    objectFit: 'cover',
-                  }}
-                  alt="Project Screenshot"
-                />
-              </div>
             </div>
           </div>
-        </div>
+            {/* Featured Project */}
+<div className="card border-0 shadow-lg overflow-hidden mb-5">
+  <div className="row g-0">
+    <div className="col-lg-6 bg-dark text-white p-5 d-flex flex-column justify-content-center">
+      <div className="mb-3 text-info fw-bold text-uppercase small">
+        Astronaut Health Project
+      </div>
+      <h3 className="display-6 fw-bold mb-3">
+        {featuredProject2.title}
+      </h3>
+      <p className="text-white-50 mb-4">
+        {featuredProject2.description}
+      </p>
+      <div className="mb-4">
+        {featuredProject2.highlights.map((h, i) => (
+          <div key={i} className="d-flex mb-2">
+            <span className="text-success me-2">✓</span>
+            <span>{h}</span>
+          </div>
+        ))}
+      </div>
+      <div className="d-flex flex-wrap gap-2 mb-4">
+        {featuredProject2.technologies.map((t) => (
+          <span key={t} className="badge bg-secondary">
+            {t}
+          </span>
+        ))}
+      </div>
+      <div className="d-flex gap-3">
+        <a
+          href={featuredProject2.demo}
+          className="btn btn-info text-white"
+        >
+          <ExternalLink size={20} className="me-2" /> Live Demo
+        </a>
+      </div>
+    </div>
 
         {/* Additional Projects */}
         <div className="row g-4">
@@ -164,17 +207,8 @@ export default function ProjectsSection() {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-5">
-          <a
-            href="hhttps://github.com/elconrad23?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-dark btn-lg px-5"
-          >
-            <Github size={20} className="me-2" /> View All on GitHub
-          </a>
-        </div>
+      </div>
+      </div>
       </div>
     </section>
   );
