@@ -5,9 +5,9 @@ import {
   Briefcase,
   Code2,
   Mail,
-  Github,
   Linkedin,
 } from 'lucide-react';
+import { SiInstagram, SiGithub } from '@icons-pack/react-simple-icons';
 
 interface SidebarProps {
   onClose?: () => void;
@@ -66,10 +66,6 @@ export default function Sidebar({ onClose }: SidebarProps) {
 
   return (
     <aside className="d-flex flex-column h-100 text-white">
-      <div className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <div className="fs-4 fw-bold">Practical thinker</div>
-      </div>
-      <p className="text-secondary small">Ideal Engineer</p>
 
       <hr className="text-secondary" />
 
@@ -94,22 +90,25 @@ export default function Sidebar({ onClose }: SidebarProps) {
 
       <hr className="text-secondary" />
 
-      <div className="d-flex gap-3">
+      <div className="d-flex gap-3 align-items-center justify-content-center mb-3">
         <a
           href="https://github.com/elconrad23"
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-white hover-text-info transition-all"
         >
-          <Github size={20} />
+          <SiGithub size={20} />
         </a>
         <a
           href="https://linkedin.com/in/elconrad23"
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-white hover-text-info transition-all"
         >
           <Linkedin size={20} />
+        </a>
+
+        <a
+          href="https://instagram.com/elconrad28"
+          className="text-white hover-text-info transition-all"
+        >
+          <SiInstagram size={20} />
         </a>
       </div>
     </aside>

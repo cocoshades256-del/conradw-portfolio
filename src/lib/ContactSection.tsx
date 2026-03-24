@@ -1,9 +1,11 @@
 import { Mail, Linkedin } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-5 bg-dark text-white">
+    <section id="contact" className="py-5 text-white section-5">
       <div className="container px-4 px-lg-5">
+        <FadeIn direction="up">
         <div className="text-center mb-5">
           <h2 className="display-4 fw-bold mb-4">Let's Connect</h2>
           <div
@@ -21,6 +23,19 @@ export default function ContactSection() {
         <div className="row g-4 align-items-center mb-5">
           <div className="col-lg-12 text-center">
             <div className="row g-4 justify-content-center">
+              <div className="col-lg-4 text-center">
+                <img
+                  className="d-inline-block px-3 py-2 bg-opacity-10 bg-info border border-info rounded-pill img-fluid"
+                  src="/pic2.jpg"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '300px',
+                    objectFit: 'cover',
+                  }}
+                  alt="Available for work"
+                />
+              </div>
               <div className="col-4 text-center">
                 <div className="card h-100 bg-secondary bg-opacity-25 border-0 text-white text-center p-4 hover-shadow transition-all">
                   <div className="card-body">
@@ -36,19 +51,6 @@ export default function ContactSection() {
                     </a>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-4 text-center">
-                <img
-                  className="d-inline-block px-3 py-2 bg-opacity-10 bg-info border border-info rounded-pill img-fluid"
-                  src="/pic2.jpg"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: '300px',
-                    objectFit: 'cover',
-                  }}
-                  alt="Available for Full-Stack Roles"
-                />
               </div>
               <div className="col-4">
                 <div className="card h-100 bg-secondary bg-opacity-25 border-0 text-white text-center p-4 hover-shadow transition-all">
@@ -71,8 +73,10 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
+        </FadeIn>
       </div>
 
+      <FadeIn direction="up" delay={0.2}>
       <div
         className="bg-gradient bg-opacity-10 p-5 rounded-4 text-center border border-secondary border-opacity-25"
         style={{ background: 'linear-gradient(to right, #083344, #0f172a)' }}
@@ -80,7 +84,7 @@ export default function ContactSection() {
         <h3 className="h2 fw-bold mb-4">Ideal Role Fit</h3>
         <div className="d-flex flex-wrap gap-3 justify-content-center mb-4">
           <span className="badge bg-light text-dark bg-opacity-75 p-3 rounded-pill">
-            Senior Full-Stack Engineer
+            Senior Dev
           </span>
           <span className="badge bg-light text-dark bg-opacity-75 p-3 rounded-pill">
             Security Engineer
@@ -90,14 +94,14 @@ export default function ContactSection() {
           </span>
         </div>
         <p className="text-white-50 mx-auto" style={{ maxWidth: '40rem' }}>
-          Especially interested in roles at security-focused startups,
-          innovative companies, or enterprises building forward-looking
+          Especially interested in roles in security-focused departments, or enterprises building forward-looking
           solutions.
         </p>
       </div>
+      </FadeIn>
 
       <div className="text-center mt-5 text-white-50 small">
-        &copy; 2026 elconrad23. Built with Nestjs & Bootstrap.
+        &copy; 2026 elconrad23. All rights reserved.
       </div>
     </section>
   );

@@ -1,10 +1,11 @@
 import { ArrowDown } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-vh-100 d-flex align-items-center justify-content-center text-center position-relative overflow-hidden from-slate-950"
+      className="min-vh-100 d-flex align-items-center justify-content-center text-center position-relative overflow-hidden section-1"
     >
       {/* Background overlay pattern */}
       <div
@@ -18,28 +19,28 @@ export default function HeroSection() {
       />
 
       <div className="container position-center z-1 px-4">
+        <FadeIn direction="up">
         <div className="row align-items-center">
           <div className="col-lg-8 text-start">
             <h1 className="display-3 fw-bold text-white mb-4 tracking-tight">
               Conrad Waako
               <br />
-              <span className="text-info bg-clip-text text-transparent bg-gradient-to-r from-info to-primary">
-                Building Solutions
-              </span>
             </h1>
 
-            <p
+            <h4
               className="lead text-secondary mb-5"
               style={{ maxWidth: '40rem' }}
             >
-              Software Engineer specializing in full-stack development,
-              cloud-native architectures, and cybersecurity-first approaches.
-            </p>
+              <span className="text-info bg-clip-text text-transparent bg-gradient-to-r from-info to-primary">
+                I love innovating Solutions
+                <br />
+              </span>
+            </h4>
 
             <div className="d-flex flex-wrap gap-3 mb-5">
               <a
                 href="#projects"
-                className="btn btn-info text-white px-5 py-3 rounded-3 fw-bold shadow-lg"
+                className="btn btn-info b text-white px-5 py-3 rounded-3 fw-bold shadow-lg"
               >
                 View Projects
               </a>
@@ -51,27 +52,32 @@ export default function HeroSection() {
               </a>
             </div>
 
-            <div className="d-flex flex-wrap gap-4 text-secondary small">
+            <div className="d-flex flex-wrap gap-4 text-secondary medium">
               <div className="d-flex align-items-center gap-2">
                 <div
                   className="rounded-circle bg-success"
                   style={{ width: '8px', height: '8px' }}
                 ></div>
-                <span>5+ Years Experience</span>
+                <span className="text-info bg-clip-text text-transparent bg-gradient-to-r from-info to-primary">
+                  5+ Years Experience</span>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <div
                   className="rounded-circle bg-info"
                   style={{ width: '8px', height: '8px' }}
                 ></div>
-                <span>7+ Languages & Frameworks</span>
+                <span className="text-info bg-clip-text text-transparent bg-gradient-to-r from-info to-primary">
+                  5+ Languages & Frameworks
+                </span>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <div
                   className="rounded-circle bg-primary"
                   style={{ width: '8px', height: '8px' }}
                 ></div>
-                <span>Security-First Mindset</span>
+                <span className="text-info bg-clip-text text-transparent bg-gradient-to-r from-info to-primary">
+                  Certified in Cyber Security
+                </span>
               </div>
             </div>
           </div>
@@ -85,6 +91,7 @@ export default function HeroSection() {
             />
           </div>
         </div>
+        </FadeIn>
       </div>
 
       <a

@@ -1,18 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  --bs-cyan: #06b6d4;
-  --bs-slate-900: #0f172a;
-  --bs-slate-800: #1e293b;
-  --bs-slate-700: #334155;
-  --text-cyan-400: #22d3ee;
-  --bg-gradient-header: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #083344 100%);
+  --bs-slate-900: #1a0b02; /* Dark elegant wood */
+  --bs-slate-800: #2e1505;
+  --bs-slate-700: #4a250a;
+  --text-cyan-400: #2563eb; /* Deep vibrant blue */
+  --bg-gradient-header: linear-gradient(135deg, #2a1610 0%, #1a0b02 100%);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   background-color: var(--bs-slate-900);
-  color: white;
+  color: rgba(255, 255, 255, 0.883);
 }
 
 .text-cyan-400 {
@@ -20,13 +20,61 @@ body {
 }
 
 .bg-cyan-500 {
-  background-color: var(--bs-cyan) !important;
+  background-color: var(--bs-slate-700) !important;
 }
 
-.from-slate-950 {
-  background: var(--bg-gradient-header);
+.text-info {
+  color: var(--text-cyan-400) !important;
 }
 
+.border-info {
+  border-color: var(--text-cyan-400) !important;
+}
+
+/* Section Backgrounds for Smooth Transitions */
+.section-1 {
+  background-color: var(--bs-slate-900);
+  background-image: linear-gradient(to bottom, rgba(255, 140, 0, 0.25) 0%, rgba(218, 165, 32, 0.18) 100%);
+}
+
+.section-2 {
+  background-color: var(--bs-slate-900);
+  background-image: linear-gradient(to bottom, rgba(218, 165, 32, 0.18) 0%, rgba(205, 133, 63, 0.2) 100%);
+}
+
+.section-3 {
+  background-color: var(--bs-slate-900);
+  background-image: linear-gradient(to bottom, rgba(205, 133, 63, 0.2) 0%, rgba(139, 69, 19, 0.25) 100%);
+}
+
+.section-4 {
+  background-color: var(--bs-slate-900);
+  background-image: linear-gradient(to bottom, rgba(139, 69, 19, 0.25) 0%, rgba(210, 105, 30, 0.22) 100%);
+}
+
+.section-5 {
+  background-color: var(--bs-slate-900);
+  background-image: linear-gradient(to bottom, rgba(210, 105, 30, 0.22) 0%, #0f172a 100%);
+}
+
+.btn {
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-info {
+  background-color: #0a192f !important; /* Thick deep navy blue */
+  border-color: #0a192f !important;
+}
+
+.btn-info:hover {
+  background-color: #172a45 !important;
+  border-color: #172a45 !important;
+}
+
+.bg-info {
+  background-color: #0a192f !important;
+}
 /* Sidebar Styling */
 .sidebar {
   width: 260px;
@@ -36,7 +84,7 @@ body {
   left: 0;
   top: 0;
   z-index: 1000;
-  background-color: transparent;
+  background-color: #0a192f !important; /* Thick deep navy blue */
   flex-shrink: 0;
   border-right: 1px solid var(--bs-slate-800);
   overflow-y: auto;
@@ -83,13 +131,13 @@ body {
 
 /* Card Styling mimicking the original look */
 .card-dark {
-  background-color: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(4px);
+  background-color: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--bs-slate-700);
 }
 
 .card-dark:hover {
-  border-color: var(--bs-cyan);
+  border-color: var(--bs-slate-800);
 }
 
 /* Scroll Snap */
@@ -100,3 +148,5 @@ html {
 section {
   scroll-margin-top: 20px;
 }
+
+/* palette : dd1c1a, fff1d0, f0c808, 086788, 06aed5 */
